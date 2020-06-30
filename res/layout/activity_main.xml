@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3EAD0"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/banner"
+        android:gravity="center">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COFFEE ORDER"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/coffee"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/coffee"
+            android:layout_marginTop="15dp"/>
+
+     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="'' CAPPUCCINO ''"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:textColor="#FF7676"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:text="' A Good Way To Start A Good Day '"
+        android:textSize="8sp"
+        android:textStyle="italic"
+        android:textColor="#FF7676"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=" Quantity "
+        android:background="@drawable/boundries"
+        android:textSize="16sp"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="decrement"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@drawable/minus" />
+
+        <TextView
+            android:id="@+id/quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="0"
+            android:textColor="#FF7676"
+            android:textSize="21sp" />
+
+        <Button
+            android:onClick="increment"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@drawable/plus" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:background="@drawable/boundries">
+
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:src="@drawable/muffin"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="6dp"
+            android:layout_gravity="center"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Some Muffins For ₹25"
+            android:layout_marginRight="8dp"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:onClick="decrement_muffin"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/minus" />
+
+        <TextView
+            android:id="@+id/muffins_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="0"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="21sp" />
+
+        <Button
+            android:onClick="increment_muffin"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/plus" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#FF7676"/>
+
+        <TextView
+            android:id="@+id/price_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="₹ 0.00"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#FF7676"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:onClick="submitOrder"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="ORDER"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="#FFFFFF"
+        android:textSize="21sp"
+        android:background="@drawable/orderbutton"
+        android:textStyle="bold"/>
+
+</LinearLayout>
